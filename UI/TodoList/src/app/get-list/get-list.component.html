@@ -1,0 +1,25 @@
+<a class="navbar-brand" href="#" id="new-button" (click)="editRecord(newItem)">Add New Item</a>
+<table class="nav-item">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of todoList">
+      <td>{{ item.itemName }}</td>
+      <td [ngStyle]="{
+              color: item.IsDOne
+                ? 'hsl(141, 53%, 53%)'
+                : 'hsl(348, 100%, 61%)'
+            }">
+        <b>{{ item.isDone | yesNO }}</b>
+      </td>
+      <td>
+        <a class="editLink" href="#" (click)="editRecord(item)">Edit</a>
+        <a class="deleteLink"   href="#" (click)="deleteRecord(item)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

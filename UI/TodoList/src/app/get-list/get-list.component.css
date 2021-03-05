@@ -1,0 +1,22 @@
+table {
+  margin-top: 1.5em;
+}
+
+tbody td {
+  text-align: right;
+  margin: 12px 12px 12px 12px;
+  padding: 12px 12px 12px 12px;
+}
+
+table.nav-item th {
+  margin: 12px 12px 12px 12px;
+  padding: 12px 12px 12px 12px;
+}
+
+a.editLink{
+    margin: 12px;
+}
+
+a.navbar-brand {
+  padding: 12px 12px 12px 12px;
+}

@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-6" *ngIf="!flag">
+    <app-get-list [todoList]="todoList" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-get-list>
+  </div>
+  <div class="col-md-6" *ngIf="flag">
+    <app-create-or-update-item (listCreated)="createOrUpdateItem($event)" [itemInfo]="todoItem"></app-create-or-update-item>
+    <!--<app-home [attr.todoList]="todoList" (editClicked)="editClicked($event)" (newClicked)="newClicked()" (recordDeleted)="deleteClicked($event)"></app-home>-->
+  </div>
+</div>
